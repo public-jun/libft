@@ -6,7 +6,7 @@
 /*   By: jnakahod <jnakahod@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 22:30:27 by jnakahod          #+#    #+#             */
-/*   Updated: 2020/12/02 12:19:26 by jnakahod         ###   ########.fr       */
+/*   Updated: 2021/04/17 00:07:33 by jnakahod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (*s++)
 		i++;
 	return (i);

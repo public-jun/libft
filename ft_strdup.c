@@ -6,7 +6,7 @@
 /*   By: jnakahod <jnakahod@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 17:57:52 by jnakahod          #+#    #+#             */
-/*   Updated: 2021/04/05 19:15:46 by jnakahod         ###   ########.fr       */
+/*   Updated: 2021/04/17 00:04:26 by jnakahod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ char	*ft_strdup(const char *s1)
 	ptr = malloc(dstsize);
 	if (ptr == NULL)
 		return (NULL);
+	if (!s1)
+	{
+		ptr[0] = '\0';
+		return (ptr);
+	}
 	ft_strlcpy(ptr, s1, dstsize);
 	return (ptr);
 }
