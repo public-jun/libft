@@ -6,7 +6,7 @@
 /*   By: jnakahod <jnakahod@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 17:57:52 by jnakahod          #+#    #+#             */
-/*   Updated: 2021/04/17 00:04:26 by jnakahod         ###   ########.fr       */
+/*   Updated: 2021/05/03 14:02:00 by jnakahod         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strdup(const char *s1)
 	char		*ptr;
 	size_t		dstsize;
 
+	if (!s1)
+		return (NULL);
 	dstsize = ((ft_strlen(s1) + 1) * sizeof(char));
 	ptr = malloc(dstsize);
 	if (ptr == NULL)
